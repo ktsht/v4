@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { StaticImage } from 'gatsby-plugin-image';
 import styled, { css } from 'styled-components';
 import { navLinks } from '@config';
 import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
-import { IconLogo } from '@components/icons';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -162,11 +162,25 @@ const Nav = ({ isHome }) => {
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <IconLogo />
+          <StaticImage
+            className="img"
+            src="../images/logo.jpg"
+            width={500}
+            quality={95}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt="Headshot"
+          />
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <IconLogo />
+          <StaticImage
+            className="img"
+            src="../images/logo.jpg"
+            width={500}
+            quality={95}
+            formats={['AUTO', 'WEBP', 'AVIF']}
+            alt="Headshot"
+          />
         </Link>
       )}
     </div>

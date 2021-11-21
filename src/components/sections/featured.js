@@ -256,7 +256,6 @@ const StyledProject = styled.li`
     a {
       width: 100%;
       height: 100%;
-      background-color: var(--green);
       border-radius: var(--border-radius);
       vertical-align: middle;
 
@@ -322,7 +321,6 @@ const Featured = () => {
               tech
               github
               external
-              cta
             }
             html
           }

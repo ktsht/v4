@@ -61,7 +61,6 @@ const StyledPic = styled.div`
     position: relative;
     width: 100%;
     border-radius: var(--border-radius);
-    background-color: var(--green);
 
     &:hover,
     &:focus {
@@ -101,7 +100,6 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
       mix-blend-mode: screen;
     }
 
@@ -126,7 +124,17 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = [
+    'Python',
+    'Java',
+    'R',
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Next.js',
+    'MySQL',
+    'Node.js',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -136,30 +144,20 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+              Hello! My name is Alex and I enjoy creating apps from scratch. My interest in web
+              development started back in 2017 when I built{' '}
+              <a href="https://kabi.tokyo/">website for a restaurant</a>!
             </p>
 
             <p>
-              Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
-            </p>
-
-            <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
-              </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              Fast-forward to today, I'm learning ML at Columbia University now. I'm a software
+              engineer with demonstrated experience through ML research on Natural Language
+              Processing (<a href="https://aclanthology.org/2021.emnlp-main.473/">one paper</a> got
+              accepted at EMNLP2021 ) and SWE internship. I have web development experience as a SWE
+              Intern at Rakuten implementing production codes in Java, Kotlin, Groovy, and React.js.
+              Also, I created a web application from scratch with three other developers by using
+              Next.js framework with GraphQL, Headless CMS Strapi, and MySQL on Heroku. Looking for
+              2022 summer SWE and ML Engineering internship opportunities.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -174,7 +172,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/me.jpg"
+              src="../../images/profile.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}
